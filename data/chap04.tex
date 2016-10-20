@@ -1,37 +1,94 @@
-\chapter{基于 WiFi 的人体动作感知}
-\section{引言}
-\subsection{感知需求及存在的困难}
-人体靠近检测
+ \chapter {基于Wi-Fi 信号的手势感知}
 
-动作存在性检测
+ \section{引言与相关工作}
 
-动作数量判断
 
-\section{已有的工作}
-基于 RSSI
-基于 视频
-基于 红外
-基于 加速传感器陀螺仪
 
-\section{基于 CSI 感知人体动作}
+ \section{基于 Wi-Fi 感知的优势及困难}
 
-\subsection{理论支持}
 
-\subsection{实验支持（相关性分析）}
-正文内容
-\section{系统设计}
+ \section{系统架构}
 
-\subsection{CSI 数据获取}
-\subsection{CSI 的预处理}
-窗口均值 波形变换 滤波 主成分分析
 
-\subsection{利用 SVM 的动作分类}
+ \section{CSI 数据的获取}
 
-特征选择及提取过程
+ \subsection{定制内核驱动}
+
+ \subsection{数据处理与可视化}
+
+（感知过程需要对数据实时处理，可视化是为了方便研究观察）
+
+
+
+
+\section{CSI 数据变化分析}
+
+
+\subsection{手势及障碍物对 CSI 幅值的影响}
+\subsection{不同样本间的相关性分析}
+\subsection{同样本不同子载波间的相关性分析}
+
+
+
+\section{感知模型}
+
+\subsection{动作存在性检测}
+\subsection{动作数量检测}
+\subsection{基于 SVM 的动作分类}
+            
+SVM 分类算法
+分类特征（幅值分布，环境对 CSI 影响的消除）     
+
+
+
 
 \section{性能评估}
-正文内容
-\subsection{实验设计}
-\subsection{结果与分析}
+
+\subsection{存在性检测}
+\subsection{数量检测}
+\subsection{SVM 分类性能}
+
+
+
 
 \section{本章小结}
+
+
+
+% \chapter{基于 WiFi 的人体动作感知}
+% \section{引言}
+% \subsection{感知需求及存在的困难}
+% 人体靠近检测
+
+% 动作存在性检测
+
+% 动作数量判断
+
+% \section{已有的工作}
+% 基于 RSSI
+% 基于 视频
+% 基于 红外
+% 基于 加速传感器陀螺仪
+
+% \section{基于 CSI 感知人体动作}
+
+% \subsection{理论支持}
+
+% \subsection{实验支持（相关性分析）}
+% 正文内容
+% \section{系统设计}
+
+% \subsection{CSI 数据获取}
+% \subsection{CSI 的预处理}
+% 窗口均值 波形变换 滤波 主成分分析
+
+% \subsection{利用 SVM 的动作分类}
+
+% 特征选择及提取过程
+
+% \section{性能评估}
+% 正文内容
+% \subsection{实验设计}
+% \subsection{结果与分析}
+
+% \section{本章小结}
