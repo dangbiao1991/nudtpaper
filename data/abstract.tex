@@ -3,22 +3,22 @@
 
 % 近年来，智能感知技术在多个领域。本文就介绍了两种基于智能终端的被动感知技术--基于声音的人车环境感知技术和基于Wi-Fi信号的手势感知技术。人车环境感知技术意在保护“低头族”的出行安全，减少交通事故。据不完全统计，由“低头族”引起的车祸数量呈逐年上升趋势。为了帮助边走路边使用手机的行人及时发现危险车辆，本文设计了一个基于智能手机麦克风检测车辆靠近的
 
-近年来，智能终端的数量和种类呈现爆发式增长，其上配备的传感器和基础功能也越来越完善。然而随着人们对终端智能程度的要求越来越高，简单的感知应用已不能满足人们的需求。面向特定情景的，更高层次的智能感知开始成为研究的重点。而在智能感知技术中，被动感知技术以其实现成本低，普适性高等特点受到青睐。本文就将介绍两种基于智能终端的被动感知技术。
+近年来，智能终端的数量和种类呈现爆发式增长，其上配备的传感器和基础功能也越来越完善。然而随着人们对终端智能程度的要求越来越高，简单的感知应用已无法满足人们的需求。面向特定情景的，更高层次的智能感知开始成为研究新方向。在智能感知技术中，被动感知技术以其实现成本低，普适性高等特点受到青睐。然而被动感知技术如何与智能终端相结合，还有待研究人员的探索。本文既研究了被动感知技术在智能终端上的两种应用。
 
-第一种技术是基于声音的人车环境感知。针对走路使用手机的“低头族”导致的交通事故逐年上升的问题，我们提出了利用智能手机帮助“低头族”感知危险汽车的办法。通过分析手机麦克风获取的音频数据，我们提出了基于时频特征和机器学习的双层感知模型。最后，我们在多种环境下对模型性能进行了评估。结果表明，该模型可以有效感知危险车辆，且对环境有一定鲁棒性。
+一，基于声音的人车环境感知技术。近年来，因行人低头使用手机导致的交通事故呈逐年上升趋势，如何减少此类事故的发生成为急需解决的问题。本文创新性的提出了一种基于声音的移动车辆检测的机制，以帮助行人预判正在靠近的危险车辆。该机制利用智能手机内置麦克风收集声音数据，然后通过对声波特性的分析来判断是否有汽车正在靠近。我们提出了多个声波的时频域特征以区分环境噪声与汽车行驶的声音。实验结果表明，该机制对背景噪声有较强容忍性，即使在人员嘈杂的单行道上，其识别成功率也保持在90\%以上。
 
-第二种技术是基于Wi-Fi信号的手势感知。随着Wi-Fi物理层能力的提升，基于高灵敏的CSI感知手势成为一种可行的方法。针对手势感知中遇到手势存在性检测、起始点判断和手势分类三个主要问题，我们提出了一个基于统计特征的感知模型。经实验验证，该模型可以有效识别手势。
+二，基于Wi-Fi信号的手势感知。智能终端时代，基于键鼠的人机交互方式不再适用，手势识别成为交互领域的风向标。现有手势识别主要基于摄像头和传感器实现。然而两者都有自己的局限性，摄像头易受光线影响，传感器需用户携带额外设备。为此，本文研究基于Wi-Fi信号的手势感知技术。本文以CSI做数据源，通过对CSI与手势的相关性进行建模，设计了基于统计的手势感知算法。此外，本文还提出了子载波幅值分布的有效特征，引入了SVM算法实现了手势分类。我们设计了五个手势三个场景，收集了近千个样本，对模型效果进行验证。结果表明，该模型手势识别准确率可达80\%以上。
 
 \end{cabstract}
 \ckeywords{被动感知;普适计算;环境感知;人机交互;安全辅助}
 
 \begin{eabstract}
-In recent years, the number and variety of smart devices are increasing explosively. Sensors equipped on smart devices are more plentiful and their functions are already perfect. However, Pepole will not be satisfied with simple sensing applications as their expectations become higher. Smart context-aware sensing will be the focus of research. As a kind of smart sensing technologhy, passive sensing techniques stand out because of its' low cost and ubiquitousness. In this paper,we will introduce two kinds of passive sensing technology based on smart devices.
+In recent years, the number and variety of smart devices are increasing explosively. Sensors equipped on smart devices are more plentiful and their functions are already perfect. However, simple sensing applications can not satisfy users any more as users' expectations becoming higher. Smart sensing-based applications is becoming a trend. As a kind of smart sensing technologhy, passive sensing techniques stand out because of their low cost and ubiquitousness. While how to apply passive sensing techniques into smart devieces still remains to be explored.So, in this paper,we do some research on passive sensing techniques based on smart devices.
 
-The first technique is smartphone-based dangerous vehicle detection. As the number of traffic accidents cause by smartphone addicts is increasing every year, we proposed a smartphone based mechanism to help smartphone addicts 
-be aware of the approaching vehicle. The microphone of phone is used to collect data. After analysis we design a two level model. The fisrt level utilizes the time frequency features and second level applies the KNN method. The evaluation are performed under different condition. Results show that the model is effecttive to detect approaching car and robust.
+The first research is smartphone-based dangerous vehicle detection. As the number of traffic accidents caused by smartphone addicts is increasing every year, we propose a smartphone-based mechanism to help smartphone addicts to be aware of the approaching vehicle. we use the microphone to collect the voice data and then analyze the acoustic wave to detect the approaching vehicle. We propose a series of time-frequency domain features to differeniate the audio induced by a moving car from the background noise. Experimental results show that, this mechanism is robust in various environments. Even in a noisy one-way street, the recognition rate is still as high as 90\%.
 
-The second technique is gesture recognition based on Wi-Fi signal. Because of the extention of physical layer capability, CSI can be achieved now. As CSI is sensitive to small changing of propagation path, it is possible to extract gesture information from CSI. In this paper, we analyse a lot of CSI samples and proposed a statistical feature based classification model. Experimental results show that the model proposed in the paper is effective.
+
+The second research is gesture perception based on Wi-Fi signal. Nowadays, keyboard-based HCI is already out of date. Gesture recognition is becoming increasingly important. Researchers have implemented gesture-based HCI using camera and sensors. But camera will not work at night and sensor-based HCI requires additional devices on users. In the paper, we propose Wi-Fi signal-based gesture perception. We make CSI as our data source, and model the relationship between CSI and gesture, and propose a gesture perception mechanism using statistical methods. Then we discover that amplitude distribution is an effective feature to differentiate various gestures and train a classifier using SVM. We design five gestures and three scenes and collect hundreds samples to evaluate the model. Result shows that the accuracy stays above 80\%.
 
 \end{eabstract}
 \ekeywords{Passive Sensing;Ubiquitous Computing;Context Awareness;HCI;Safety Assistance}
